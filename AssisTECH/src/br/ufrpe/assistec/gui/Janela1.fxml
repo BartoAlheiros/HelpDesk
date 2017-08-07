@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="640.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.assistec.gui.Janela1Controller">
+   <center>
+      <AnchorPane prefHeight="130.0" prefWidth="362.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar layoutY="-1.0" prefHeight="31.0" prefWidth="1222.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Cadastrar">
+                  <items>
+                    <MenuItem fx:id="cadastrarCliente" mnemonicParsing="false" onAction="#cadastrarCliente" text="Novo Cliente" />
+                        <MenuItem fx:id="cadastrarTecnico" mnemonicParsing="false" onAction="#cadastrarTecnico" text="Novo Técnico" />
+                        <MenuItem fx:id="cadastrarEquipamento" mnemonicParsing="false" onAction="#cadastrarEquipamento" text="Equipamento" />
+                        <MenuItem mnemonicParsing="false" text="OS" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Consultar">
+                    <items>
+                      <MenuItem fx:id="consultarCliente" mnemonicParsing="false" onAction="#consultarCliente" text="Clientes" />
+                        <MenuItem fx:id="consultarTecnico" mnemonicParsing="false" onAction="#consultarTecnico" text="Técnicos" />
+                        <MenuItem mnemonicParsing="false" text="Equipamentos" />
+                        <MenuItem mnemonicParsing="false" text="OS" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Editar">
+                    <items>
+                      <MenuItem fx:id="editarCliente" mnemonicParsing="false" onAction="#editarCliente" text="Cliente" />
+                        <MenuItem mnemonicParsing="false" text="Técnico" />
+                        <MenuItem mnemonicParsing="false" text="Equipamento" />
+                        <MenuItem mnemonicParsing="false" text="OS" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Remover">
+                    <items>
+                      <MenuItem fx:id="removerCliente" mnemonicParsing="false" onAction="#removerCliente" text="Cliente" />
+                        <MenuItem fx:id="removerTecnico" mnemonicParsing="false" onAction="#removerTecnico" text="Técnico" />
+                        <MenuItem fx:id="consultarEquipamento" mnemonicParsing="false" onAction="#consultarEquipamento" text="Equipamento" />
+                        <MenuItem mnemonicParsing="false" text="OS" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <ImageView fitHeight="611.0" fitWidth="1273.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../assistech4.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
