@@ -1,0 +1,13 @@
+
+INSERT INTO END_FORNECEDOR VALUES(31697761425748,"Avenida Padre Carapuceiro, 105, Boa Viagem, Recife, PE.");
+
+INSERT INTO END_FORNECEDOR VALUES(79641280127689,"Avenida Mahado de Assis, 105 Barra da Tijuca, Rio de Janeiro, RJ.");
+
+INSERT INTO END_FORNECEDOR VALUES(83850112534128,"Rua Alcides Castro, 77 Bexiga, São Paulo, SP.");
+
+INSERT INTO END_FORNECEDOR VALUES(89693100522272,"Rua Antonio Sobrinho, 99 São Paulo, SP.");
+
+INSERT INTO END_FORNECEDOR VALUES(92422837149351,"Rua Chico Science, 111, Recife, PE.");
+
+INSERT INTO END_FORNECEDOR VALUES(98352251192554,"Avenida Almeida Campos, 01, Distrito Industrial, São Paulo.");
+

@@ -1,0 +1,57 @@
+EQUIPAMENTO;;;;;;
+Cod;Data_entrada;Setor;historico;Fabricante;Estado;Cod_contrato
+34993;2012-11-10;Ferragens;13;CCE;Rio de Janeiro;1759570
+13508;2012-11-11;Automacao;7;Lenovo;Bahia;6926065
+19703;2012-11-12;Almoxarifado;11;Philco;Santa Catarina;9302429
+29476;2012-11-13;Almoxarifado;4;Lenovo;São Paulo;6787223
+79969;2012-11-14;Automacao;2;Philco;Rio Grande do Sul;8367571
+18398;2012-11-15;Automacao;5;Positivo;Minas Gerais;7917849
+55377;2012-11-16;Automacao;5;Philco;Pará;4914676
+41246;2012-11-17;Recepcao;6;Itautech;Bahia;1450279
+36512;2012-11-18;Almoxarifado;5;CCE;São Paulo;6711649
+53435;2012-03-19;Automacao;10;Philco;Rio Grande do Sul;3578660
+99542;2012-11-20;Ferragens;7;CCE;Pará;1759570
+20790;2012-11-21;Ferragens;12;HP;Rio de Janeiro;6926065
+44201;2012-11-22;Recepcao;1;CCE;Paraná;9302429
+75322;2012-11-23;Automacao;5;Philco;São Paulo;6787223
+31115;2012-11-24;Automacao;14;Itautech;Bahia;8367571
+71545;2012-11-25;Recepcao;4;Philco;Minas Gerais;7917849
+34357;2012-11-26;Ferragens;14;Positivo;Rio de Janeiro;4914676
+60101;2012-11-27;Almoxarifado;3;Itautech;Bahia;1450279
+24829;2012-11-28;Automacao;8;Positivo;Goiás;6711649
+63820;2012-11-29;Automacao;14;Itautech;São Paulo;3578660
+98911;2012-11-30;Recepcao;10;HP;Pará;1759570
+71963;2012-11-20;Ferragens;7;CCE;Bahia;6926065
+65077;2012-03-12;Almoxarifado;2;Lenovo;São Paulo;9302429
+48641;2012-11-12;Recepcao;11;Itautech;Santa Catarina;6787223
+67373;2012-11-13;Recepcao;7;CCE;Paraná;8367571
+22526;2012-11-14;Ferragens;15;Lenovo;São Paulo;7917849
+57213;2012-11-15;Almoxarifado;10;Lenovo;Maranhão;4914676
+40554;2012-11-16;Recepcao;1;Philco;São Paulo;1450279
+75216;2012-11-17;Almoxarifado;9;CCE;São Paulo;6711649
+59914;2012-11-18;Almoxarifado;7;CCE;Paraná;3578660
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;

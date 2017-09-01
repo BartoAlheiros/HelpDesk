@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="640.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.assistec.gui.Janela1Controller">
+<BorderPane prefHeight="640.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.assistec.gui.Janela1Controller">
    <center>
       <AnchorPane prefHeight="130.0" prefWidth="362.0" BorderPane.alignment="CENTER">
          <children>
@@ -14,6 +16,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Cadastrar">
                   <items>
+                        <MenuItem mnemonicParsing="false" text="Novo Funcionário" />
                     <MenuItem fx:id="cadastrarCliente" mnemonicParsing="false" onAction="#cadastrarCliente" text="Novo Cliente" />
                         <MenuItem fx:id="cadastrarTecnico" mnemonicParsing="false" onAction="#cadastrarTecnico" text="Novo Técnico" />
                         <MenuItem fx:id="cadastrarEquipamento" mnemonicParsing="false" onAction="#cadastrarEquipamento" text="Equipamento" />
@@ -48,7 +51,7 @@
             </MenuBar>
             <ImageView fitHeight="611.0" fitWidth="1273.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../assistech4.png" />
+                  <Image url="@assistech4.png" />
                </image>
             </ImageView>
          </children>

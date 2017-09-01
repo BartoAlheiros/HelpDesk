@@ -1,0 +1,23 @@
+
+INSERT INTO LOCALIZACAO VALUES(13496314178466,"Rua Arturo Rocha, 101, Recife.",'Pernambuco');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178467,"Rua Desembargador Carlos Alberto Ferreira da Silva, 277, Rio de Janeiro.",'Rio de Janeiro');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178468,"Rua Augusto SIlva, 144, Rondonia.",'Roraima');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178469,"Rua Carlos Motta, 107, São Paulo.",'São Paulo');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178470,"Rua Alves Ramalho, 47, Campina Grande.",'Paraíba');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178471,"Rua Bexiga 70, Campos do Jordão.",'São Paulo');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178472,"Avenida Carlos Chagas, SN.",'Goiás');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178473,"Avenida Nova Descoberta, 455.",'Bahia');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178474,"Avenida Ourives, 54.",'Minas Gerais');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178475,"Rua Alves Castro, 101.",'São Paulo');
+
+INSERT INTO LOCALIZACAO VALUES(13496314178476,"Rua Marechal Deodoro da Fonseca, 300.",'Paraná');
+

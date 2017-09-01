@@ -1,0 +1,49 @@
++--------------------------------------------+
+| Catalog Diff Report                        |
++--------------------------------------------+
+Table `assistech`.`tecnico` was dropped
+Table `assistech`.`tipo_despesa` was dropped
+Table `assistech`.`tipo_contrato` was dropped
+Table `assistech`.`tecnico_interno` was dropped
+Table `assistech`.`orcamento` was dropped
+Table `assistech`.`kpi` was dropped
+Table `assistech`.`jornada_trabalho` was dropped
+Table `assistech`.`item_estoque` was dropped
+Table `assistech`.`fornecedor` was dropped
+Table `assistech`.`fornece` was dropped
+Table `assistech`.`estante` was dropped
+Table `assistech`.`empresa` was dropped
+Table `assistech`.`documento` was dropped
+Table `assistech`.`despesa_viagem` was dropped
+Table `assistech`.`dependente` was dropped
+Table `assistech`.`contrato` was dropped
+Table `assistech`.`contracheque` was dropped
+Table `assistech`.`computador` was dropped
+Table `assistech`.`cliente_jur` was dropped
+Table `assistech`.`cliente_fisico` was dropped
+Table `assistech`.`categoria` was dropped
+Table `assistech`.`atendente_solucionador_direcionador` was dropped
+Table `assistech`.`almoxarifado` was dropped
+Table `assistech`.`adm_financeiro` was dropped
+Table `assistech`.`funcionario` was modified
+  foreign keys:
+  - removed foreign key: fk_funcionario_supervisiona1
+  - removed foreign key: fk_funcionario_unidade_de_suporte1
+  __
+Table `assistech`.`funcionario` was modified
+  columns:
+  - added column Matricula_supervisor of type VARCHAR(10)
+  - removed column supervisor_matricula
+  __
+  indices:
+  - added index fk_funcionario_supervisiona1_idx with columns: Matricula_supervisor
+  - added index fk_funcionario_unidade_de_suporte_idx with columns: unidade_de_suporte_CNPJ
+  - removed index fk_funcionario_supervisiona1_idx
+  __
+  foreign keys:
+  - added foreign key fk_funcionario_unid_suporte with columns: unidade_de_suporte_CNPJ, referred table: unidade_de_suporte with columns: CNPJ
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+----------------------------------------------
+End of MySQL Workbench Report

@@ -1,0 +1,7 @@
+
+INSERT INTO CATEGORIA VALUES('1','Mecânicos Impressora');
+
+INSERT INTO CATEGORIA VALUES('2','Peças Computador PC');
+
+INSERT INTO CATEGORIA VALUES('3','Peças Notebook');
+

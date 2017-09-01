@@ -1,0 +1,351 @@
++--------------------------------------------+
+| Catalog Diff Report                        |
++--------------------------------------------+
+Schema `default`.`assistech` was dropped
+Table `assistech`.`abre_chamado` was dropped
+Table `assistech`.`adm_financeiro` was dropped
+Table `assistech`.`almoxarifado` was dropped
+Table `assistech`.`atendente_solucionador_direcionador` was dropped
+Table `assistech`.`base_problema_kb` was dropped
+Table `assistech`.`baseou_em` was dropped
+Table `assistech`.`categoria` was dropped
+Table `assistech`.`chamado` was dropped
+Table `assistech`.`cliente` was dropped
+Table `assistech`.`cliente_fisico` was dropped
+Table `assistech`.`cliente_jur` was dropped
+Table `assistech`.`computador` was dropped
+Table `assistech`.`contracheque` was dropped
+Table `assistech`.`contrato` was dropped
+Table `assistech`.`dependente` was dropped
+Table `assistech`.`despesa_viagem` was dropped
+Table `assistech`.`documento` was dropped
+Table `assistech`.`empresa` was dropped
+Table `assistech`.`equipamento` was dropped
+Table `assistech`.`estante` was dropped
+Table `assistech`.`fatura` was dropped
+Table `assistech`.`fornece` was dropped
+Table `assistech`.`fornecedor` was dropped
+Table `assistech`.`funcionario` was dropped
+Table `assistech`.`impressora` was dropped
+Table `assistech`.`insumo` was dropped
+Table `assistech`.`insumo_usado_servico` was dropped
+Table `assistech`.`item_estoque` was dropped
+Table `assistech`.`jornada_trabalho` was dropped
+Table `assistech`.`kpi` was dropped
+Table `assistech`.`localizacao` was dropped
+Table `assistech`.`nobreak` was dropped
+Table `assistech`.`orcamento` was dropped
+Table `assistech`.`ordem_de_servico` was dropped
+Table `assistech`.`parcela_pagamento` was dropped
+Table `assistech`.`servico` was dropped
+Table `assistech`.`supervisiona` was dropped
+Table `assistech`.`supervisor` was dropped
+Table `assistech`.`tecnico` was dropped
+Table `assistech`.`tecnico_campo` was dropped
+Table `assistech`.`tecnico_interno` was dropped
+Table `assistech`.`tipo_contrato` was dropped
+Table `assistech`.`tipo_despesa` was dropped
+Table `assistech`.`tipo_servico` was dropped
+Table `assistech`.`unidade_de_suporte` was dropped
+Table `assistech`.`abre` was dropped
+Table `mydb`.`funcionario` was created
+  columns:
+  - matricula of type VARCHAR
+  - Cpf of type VARCHAR
+  - Matricula_supervisor of type VARCHAR
+  - unidade_de_suporte_CNPJ of type VARCHAR
+  - Login of type VARCHAR
+  - Senha of type VARCHAR
+  - Nome of type VARCHAR
+  - Cod_Contracheque of type VARCHAR
+  - Sequencial_Dependente of type VARCHAR
+  - Email of type VARCHAR
+  - Carga_hora of type INT
+  __
+  indices:
+  - PRIMARY with columns: matricula, Cpf
+  - Matricula_UNIQUE with columns: matricula
+  - fk_funcionario_unidade_de_suporte1_idx with columns: unidade_de_suporte_CNPJ
+  - fk_funcionario_supervisiona1_idx with columns: Matricula_supervisor
+  - fk_funcionario_unidade_de_suporte_idx with columns: unidade_de_suporte_CNPJ
+  __
+  foreign keys:
+  - fk_funcionario_unid_suporte with columns: unidade_de_suporte_CNPJ, referred table: unidade_de_suporte with columns: CNPJ
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`base_problema_kb` was created
+  columns:
+  - Id_base_problema_KB of type VARCHAR
+  - servico_COD of type VARCHAR
+  - Descricao of type VARCHAR
+  - Solucao of type VARCHAR
+  - Dt_entrada of type DATE
+  - Tempo_necessario of type INT
+  - Obs of type VARCHAR
+  __
+  indices:
+  - PRIMARY with columns: Id_base_problema_KB
+  - fk_base_problema_kb_servico1_idx with columns: servico_COD
+  __
+  foreign keys:
+  - fk_base_problema_kb_servico1 with columns: servico_COD, referred table: servico with columns: COD
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`chamado` was created
+  columns:
+  - No_Seq of type INT
+  - Tipo of type VARCHAR
+  - Status_ of type VARCHAR
+  - Descric of type VARCHAR
+  - Prioridade of type VARCHAR
+  - tecnico_campo_matricula of type VARCHAR
+  - cliente_abre_chamado_cliente_COD of type VARCHAR
+  - supervisor_funcionario_matricula of type VARCHAR
+  __
+  indices:
+  - PRIMARY with columns: No_Seq, cliente_abre_chamado_cliente_COD, supervisor_funcionario_matricula
+  - fk_chamado_tecnico_campo1_idx with columns: tecnico_campo_matricula
+  - fk_chamado_cliente_abre_chamado1_idx with columns: cliente_abre_chamado_cliente_COD
+  - fk_chamado_supervisor1_idx with columns: supervisor_funcionario_matricula
+  __
+  foreign keys:
+  - fk_chamado_tecnico_campo1 with columns: tecnico_campo_matricula, referred table: tecnico_campo with columns: funcionario_matricula
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  - fk_chamado_cliente_abre_chamado1 with columns: cliente_abre_chamado_cliente_COD, referred table: abre_chamado with columns: cliente_COD
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  - fk_chamado_supervisor1 with columns: supervisor_funcionario_matricula, referred table: supervisor with columns: funcionario_matricula
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`fatura` was created
+  columns:
+  - COD of type VARCHAR
+  - Num_OS of type VARCHAR
+  - status_ of type VARCHAR
+  - No_Parcelas of type INT
+  - Valor_Total of type FLOAT
+  __
+  indices:
+  - PRIMARY with columns: COD, Num_OS
+  - fk_fatura_ordem_de_servico1_idx with columns: Num_OS
+  __
+  foreign keys:
+  - fk_fatura_ordem_de_servico1 with columns: Num_OS, referred table: ordem_de_servico with columns: Num_OS
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`impressora` was created
+  columns:
+  - Cod_Equip of type VARCHAR
+  - modelo of type VARCHAR
+  __
+  indices:
+  - PRIMARY with columns: Cod_Equip
+  __
+  foreign keys:
+  - impressora_equip_fk with columns: Cod_Equip, referred table: equipamento with columns: Cod_Equipamento
+    - action on update: none
+    - action on delete: none
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`nobreak` was created
+  columns:
+  - Cod_Equip of type VARCHAR
+  - modelo of type VARCHAR
+  - kva of type INT
+  __
+  indices:
+  - PRIMARY with columns: Cod_Equip
+  __
+  foreign keys:
+  - nobreak_equip_fk with columns: Cod_Equip, referred table: equipamento with columns: Cod_Equipamento
+    - action on update: none
+    - action on delete: none
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`parcela_pagamento` was created
+  columns:
+  - Seq of type INT
+  - fatura_COD of type VARCHAR
+  - Dta_Pagto of type DATE
+  - Dta_Parcela of type DATE
+  - vl_pag_parcela of type DOUBLE
+  - vl_total of type DOUBLE
+  - juros of type FLOAT
+  __
+  indices:
+  - PRIMARY with columns: Seq, fatura_COD
+  - fk_parcela_pagamento_fatura1_idx with columns: fatura_COD
+  __
+  foreign keys:
+  - fk_parcela_pagamento_fatura1 with columns: fatura_COD, referred table: fatura with columns: COD
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`servico` was created
+  columns:
+  - COD of type VARCHAR
+  - COD_Tipo_Servico of type VARCHAR
+  - Num_OS of type VARCHAR
+  - Status of type VARCHAR
+  - Descricao of type VARCHAR
+  - Valor of type INT
+  __
+  indices:
+  - PRIMARY with columns: COD, Num_OS, COD_Tipo_Servico
+  - fk_servico_ordem_de_servico1_idx with columns: Num_OS
+  - fk_servico_tipo_servico1_idx with columns: COD_Tipo_Servico
+  __
+  foreign keys:
+  - fk_servico_ordem_de_servico1 with columns: Num_OS, referred table: ordem_de_servico with columns: Num_OS
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  - fk_servico_tipo_servico1 with columns: COD_Tipo_Servico, referred table: tipo_servico with columns: Cod_tipo_servico
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`tipo_servico` was created
+  columns:
+  - Cod_tipo_servico of type VARCHAR
+  - Descricao of type VARCHAR
+  __
+  indices:
+  - PRIMARY with columns: Cod_tipo_servico
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`Localizacao` was created
+  columns:
+  - unidade_de_suporte_CNPJ of type VARCHAR
+  - estado of type VARCHAR
+  - end of type VARCHAR
+  __
+  indices:
+  - PRIMARY with columns: unidade_de_suporte_CNPJ
+  __
+  foreign keys:
+  - fk_Localizacao_unidade_de_suporte1 with columns: unidade_de_suporte_CNPJ, referred table: unidade_de_suporte with columns: CNPJ
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`supervisiona` was created
+  columns:
+  - supervisor_matricula of type VARCHAR
+  - data_inicio of type DATE
+  __
+  indices:
+  - fk_supervisiona_supervisor1_idx with columns: supervisor_matricula
+  - PRIMARY with columns: supervisor_matricula
+  __
+  foreign keys:
+  - fk_supervisiona_supervisor1 with columns: supervisor_matricula, referred table: supervisor with columns: funcionario_matricula
+    - action on update: CASCADE
+    - action on delete: CASCADE
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`abre_chamado` was created
+  columns:
+  - cliente_COD of type VARCHAR
+  __
+  indices:
+  - PRIMARY with columns: cliente_COD
+  __
+  foreign keys:
+  - fk_cliente_abre_chamado_cliente1 with columns: cliente_COD, referred table: cliente with columns: COD
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`baseou_em` was created
+  columns:
+  - Id_base_problema_KB of type VARCHAR
+  - servico_COD of type VARCHAR
+  __
+  indices:
+  - PRIMARY with columns: Id_base_problema_KB, servico_COD
+  - fk_servico_has_base_problema_kb_base_problema_kb1_idx with columns: Id_base_problema_KB
+  - fk_servico_has_base_problema_kb_servico1_idx with columns: servico_COD
+  __
+  foreign keys:
+  - fk_servico_has_base_problema_kb_servico1 with columns: servico_COD, referred table: servico with columns: COD
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  - fk_servico_has_base_problema_kb_base_problema_kb1 with columns: Id_base_problema_KB, referred table: base_problema_kb with columns: Id_base_problema_KB
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+Table `mydb`.`insumo_usado_servico` was created
+  columns:
+  - COD_servico of type VARCHAR
+  - COD_Insumo of type VARCHAR
+  - qtd of type INT
+  __
+  indices:
+  - PRIMARY with columns: COD_servico, COD_Insumo
+  - fk_servico_has_insumo_insumo1_idx with columns: COD_Insumo
+  - fk_servico_has_insumo_servico1_idx with columns: COD_servico
+  __
+  foreign keys:
+  - fk_servico_has_insumo_servico1 with columns: COD_servico, referred table: servico with columns: COD
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  - fk_servico_has_insumo_insumo1 with columns: COD_Insumo, referred table: insumo with columns: Cod_Insumo
+    - action on update: NO ACTION
+    - action on delete: NO ACTION
+  __
+  attributes:
+  - engine: InnoDB
+  - default character set: utf8
+  __
+----------------------------------------------
+End of MySQL Workbench Report
