@@ -39,19 +39,12 @@ public class Cliente extends Usuario implements Comparable<Cliente>, Serializabl
 	public String toString() {
 		String resultado = String.format("%5s %5s\n", "cpf: ", this.cpf);
 		resultado += super.toString();
-		resultado += String.format("%5s %5s\n", "Endereço: ", this.endereco);
+		resultado += String.format("%5s %5s\n", "Endereï¿½o: ", this.endereco);
 
 		return resultado;
 	}
 
-	public static void main(String[] args) {
-		//Cliente c1 = new Cliente("032890098-78", "João", "da Silva Júnior", "Rua Leão Coroado, 109, Jardim Brasil, Olinda - PE", "3729-0452", "joao_da_silva_37@yahoo.com.br", 12);
-
-		//System.out.println(c1);
-
-	}
-
-	@Override
+        @Override
 	public int compareTo(Cliente cli) {
 		
 		return this.getNomeCompleto().compareTo(cli.getNomeCompleto());

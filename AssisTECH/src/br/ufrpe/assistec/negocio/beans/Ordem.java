@@ -8,6 +8,10 @@ public class Ordem {
 	private Tecnico tecnico;
 	private String dataEntrada;
 	private String dataEntrega;
+        private String nomePortador;
+        private String prioridade;
+    private String caracteristicasDoDefeito;
+    private String relatorio;
 	
 	
 	public void setTecnico(Tecnico tecnico) {
@@ -35,6 +39,7 @@ public class Ordem {
 	}
 
 	public String getPrioridade() {
+        
 		return prioridade;
 	}
 
@@ -74,7 +79,7 @@ public class Ordem {
 		this.dataEntrega = dataEntrega;
 	}
 
-	public String getCaracteristicasDoDefeito() {
+	public String getCaracteristicasDoDefeito(String caracteristicasDoDefeito) {
 		return caracteristicasDoDefeito;
 	}
 	public void setCaracteristicasDoDefeito(String caracteristicasDoDefeito) {
@@ -90,7 +95,7 @@ public class Ordem {
 	}
 
 	public void modificarRelatorioDeManutencao(String relatorioDeManutencao) {
-		this.relatorio = this.relatorio + " " + relatorioDeManutencao; //concatena a String recebida de relatorio e acrescenta à antiga.
+		this.relatorio = this.relatorio + " " + relatorioDeManutencao; //concatena a String recebida de relatorio e acrescenta ï¿½ antiga.
 	}
 
 	public boolean equals(Ordem ordem) {
@@ -104,7 +109,7 @@ public class Ordem {
 
 	@Override
 	public String toString() {
-		return "OS No: " + this.numero +"\n" + "Data: " + this.dataEntrada + "\n" + "Portador: " + this.nomePortador + "\n\n" + "                 Cliente"+ "\n\n" + this.cliente.toString() + "\n" + "                 Equipamento" + "\n\n" + this.equipamento.toString() + "\n" + "Características do Defeito: \n" + this.getCaracteristicasDoDefeito() + "\n\n" + "Técnico Responsável" + "\n"  + this.tecnico.toString() + "\n\n" + "Relatório de Manutenção" + "\n" + this.relatorio + "\n\n";
+		return "OS No: " + this.numero +"\n" + "Data: " + this.dataEntrada + "\n" + "Portador: " + this.nomePortador + "\n\n" + "                 Cliente"+ "\n\n" + this.cliente.toString() + "\n" + "                 Equipamento" + "\n\n" + this.equipamento.toString() + "\n" + "Caracterï¿½sticas do Defeito: \n" + this.getCaracteristicasDoDefeito() + "\n\n" + "Tï¿½cnico Responsï¿½vel" + "\n"  + this.tecnico.toString() + "\n\n" + "Relatï¿½rio de Manutenï¿½ï¿½o" + "\n" + this.relatorio + "\n\n";
 	}
 
 	public String toStringPrioridades() {
@@ -131,14 +136,18 @@ public class Ordem {
 	}
 
 	/*
-	 * Método que mostra uma tabela com todas as OS's cadastradas.
+	 * Mï¿½todo que mostra uma tabela com todas as OS's cadastradas.
 	 * 
 	 * */
 	public String toStringTabela() {
 		String resultado = "************************************\n";
 		resultado += String.format("%6s %7s\n","OS no", "Cliente");
 		resultado += "************************************\n";
-		//return "OS no: " +"\n"+ this.numero + "Cliente: " +  this.cliente.getNomeCompleto() + "\n" + "Equipamento: " + this.equipamento.getTipo() + "\n" + "Série: " + this.equipamento.getNumeroSerie() +"\n" + "-------------------------------------------------------------------";
+		//return "OS no: " +"\n"+ this.numero + "Cliente: " +  this.cliente.getNomeCompleto() + "\n" + "Equipamento: " + this.equipamento.getTipo() + "\n" + "Sï¿½rie: " + this.equipamento.getNumeroSerie() +"\n" + "-------------------------------------------------------------------";
 		return resultado;
 	}
+
+    private String getCaracteristicasDoDefeito() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

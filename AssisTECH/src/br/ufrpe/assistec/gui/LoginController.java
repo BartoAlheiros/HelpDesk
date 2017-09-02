@@ -30,7 +30,14 @@ public class LoginController implements Initializable{
 	@FXML private Button btnAcessar;
 	@FXML private ComboBox<String> privilegio;
 	ServidorAssisTech svr = ServidorAssisTech.getInstance();
+        ObservableList<String> list = FXCollections.observableArrayList("Cliente", "Técnico", "Funcionário");
 
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		privilegio.setItems(list);
+
+	}
 
 	@FXML public void ckLoginData(ActionEvent event) throws IOException {
 		String usrName = new String(txtUserName.getText());
@@ -87,12 +94,5 @@ public class LoginController implements Initializable{
 
 	}//Fim do método chkLoginData
 
-	ObservableList<String> list = FXCollections.observableArrayList("Cliente", "Técnico");
-
-
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		privilegio.setItems(list);
-
-	}
+	
 }

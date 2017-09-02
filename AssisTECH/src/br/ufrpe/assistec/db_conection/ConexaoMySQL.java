@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.simgeh.db_conection;
+package br.ufrpe.assistec.db_conection;
 
 /**
  *
@@ -49,13 +49,13 @@ public class ConexaoMySQL {
 // Configurando a nossa conexão com um banco de dados//
             String serverName = "localhost";    //caminho do servidor do BD
 
-            String mydatabase = "mysql";       //nome do seu banco de dados
+            String mydatabase = "assistech";       //nome do seu banco de dados
  
             String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
 
             String username = "root";        //nome de um usuário de seu BD      
 
-            String password = "B4rt0gataum";      //sua senha de acesso
+            String password = "";      //sua senha de acesso
 
             connection = DriverManager.getConnection(url, username, password);
 
@@ -122,15 +122,5 @@ public class ConexaoMySQL {
 
     }
     
-    //testar conexao
-    public static void main(String[] args) {
-        
-        //status antes de conectar
-        System.out.println(ConexaoMySQL.statusConection());
-        
-        ConexaoMySQL.getConexaoMySQL();
-        
-        //exbie status após conexao
-        System.out.println(ConexaoMySQL.statusConection());
-    }
+    
 }

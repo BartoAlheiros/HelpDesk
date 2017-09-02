@@ -104,6 +104,8 @@ public class RepositorioClientesArrayList implements IRepositorioClientes, Seria
 	}
 
 
+
+
 	private static RepositorioClientesArrayList lerDoArquivo() {
 		RepositorioClientesArrayList instanciaLocal = null;
 
@@ -167,7 +169,7 @@ public class RepositorioClientesArrayList implements IRepositorioClientes, Seria
 
 		RepositorioClientesArrayList repo = RepositorioClientesArrayList.getInstance();
 
-		Cliente cli1 = new Cliente("JoaoSilva", "12791", new Long(1234567), "Jo�o", "Silva", "Rua das Gar�as, 72.", "3493-0282", "joao@gmail.com", 2);
+		Cliente cli1 = new Cliente("JoaoSilva", "12791", new Long(1234567), "João", "Silva", "Rua das Garças, 72.", "3493-0282", "joao@gmail.com", 2);
 		Cliente cli2 = new Cliente("Claudio", "123", new Long(1234568), "Cl�udio", "Silva", "Rua das Gar�as, 72.", "3493-0282", "joao@gmail.com", 2);
 		Cliente cli3 = new Cliente("CSilva", "456", new Long(1234569), "Cristiano", "Silva", "Rua das Gar�as, 72.", "3493-0282", "joao@gmail.com", 2);
 		Cliente cli4 = new Cliente("NSilva", "321", new Long(1234561), "Norma", "Silva", "Rua das Gar�as, 72.", "3493-0282", "joao@gmail.com", 2);

@@ -143,21 +143,4 @@ public class RepositorioTecnicoArrayList implements IRepositorioTecnicos, Serial
 		getInstance().listaTecnicos.set(getInstance().listaTecnicos.indexOf(tec1), tec2);
 	}
 	
-	public static void main(String[] args) {
-		RepositorioTecnicoArrayList repo = RepositorioTecnicoArrayList.getInstance();
-		Tecnico tec = new Tecnico("joao", "1234", "1234", "Joao", "Silva", "joao@gmail.com", "3492-3200", "Rua augusto de campos, 72.", 0);
-		
-		repo.cadastrar(tec);
-		System.out.println("Tencico cadastrado.\n Listando Técnicos.\n");
-		
-		imprimir(repo.listarTodos());
-		
-	}
-	
-	public static void imprimir(List<Tecnico> listaTec) {
-		for(Tecnico tec: listaTec) {
-			System.out.println(tec);
-		}
-	}
-
 }

@@ -1,7 +1,7 @@
 package br.ufrpe.assistec.negocio.beans;
 
 
-/*Obs: 1 - se o no da OS for '0' ele não está em NENHUMA OS.*/
+/*Obs: 1 - se o no da OS for '0' ele nï¿½o estï¿½ em NENHUMA OS.*/
 
 public class Equipamento {
 	
@@ -11,7 +11,7 @@ public class Equipamento {
 	private String prioridade;
 	private String caracteristicasDoDefeito;
 	private String relatorio;
-	private String nomePortador; // O portador é A pessoa que recebeu o equipamento, das mãos do cliente, na entrada. Que será um funcionário da loja: técnico ou atendente.
+	private String nomePortador; // O portador ï¿½ A pessoa que recebeu o equipamento, das mï¿½os do cliente, na entrada. Que serï¿½ um funcionï¿½rio da loja: tï¿½cnico ou atendente.
 	
 	public Equipamento(String tipo, String numSerie, String numOS) {
 		this.tipo = tipo;
@@ -98,9 +98,9 @@ public class Equipamento {
 		resultado += String.format("%7s %1s\n", "Portador: ", this.nomePortador);
 		resultado += String.format("%6s %5s\n", "OS no: ", this.numOS);
 		resultado += String.format("%7s %1s\n", "Prioridade : ", this.prioridade);
-		resultado += String.format("%7s %1s\n", "Série no: ", this.numSerie);
+		resultado += String.format("%7s %1s\n", "Sï¿½rie no: ", this.numSerie);
 		resultado += String.format("%7s %1s\n", "Resumo do Defeito: ", this.caracteristicasDoDefeito);
-		resultado += String.format("%7s %1s\n", "Relatório: ", this.relatorio);
+		resultado += String.format("%7s %1s\n", "Relatï¿½rio: ", this.relatorio);
 
 		return resultado;
 	}
@@ -114,16 +114,4 @@ public class Equipamento {
 		return false;
 	}
 
-
-	public static void main(String[] args) {
-		Equipamento e1 = new Equipamento();
-		Equipamento e2 = new Equipamento();
-		Equipamento e3 = new Equipamento();
-
-		e1.setTipo("Guitarra");
-		e1.setNumeroSerie("Marshall 332");
-		e1.setNumeroDeOrdem("112");
-
-		System.out.println(e1);
-	}
 }

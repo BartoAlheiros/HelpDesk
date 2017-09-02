@@ -149,4 +149,8 @@ public class RepositorioEquipamentoArrayList implements IRepositorioEquipamentos
 		return false;
 	}
 
+    public boolean existe(Equipamento equip) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

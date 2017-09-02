@@ -1,6 +1,5 @@
 package br.ufrpe.assistec.negocio;
 
-import br.ufrpe.assistec.bkp.RepositorioEquipamentosArray;
 import br.ufrpe.assistec.dados.IRepositorioEquipamentos;
 import br.ufrpe.assistec.dados.RepositorioEquipamentoArrayList;
 import br.ufrpe.assistec.negocio.beans.Equipamento;
@@ -15,8 +14,8 @@ public class ControladorEquipamentos {
 
 	/*
 	 * Cadastra um equipamento no array de equipamentos, somente se 
-	 * não existir nenhum equipamento cadastrado com o mesmo número de série do equipamento passado
-	 * como parâmetro.
+	 * nï¿½o existir nenhum equipamento cadastrado com o mesmo nï¿½mero de sï¿½rie do equipamento passado
+	 * como parï¿½metro.
 	 * 
 	 * */
 	public void cadastrar(Equipamento e) throws EquipamentoExisteException {
@@ -42,14 +41,14 @@ public class ControladorEquipamentos {
 
 	public void remover(String numero) throws EquipamentoExisteException, EquipamentoNaoExisteException {
 		if(this.existeEquipSerie(numero)) {
-			((RepositorioEquipamentosArray)this.repositorio).remover(numero);
+			((RepositorioEquipamentoArrayList)this.repositorio).remover(numero);
 		}else {
 			throw new EquipamentoNaoExisteException(numero);
 		}
 	}
 
 	public void atualizar(Equipamento equip) throws EquipamentoNaoExisteException {
-		((RepositorioEquipamentosArray)this.repositorio).atualizar(equip);
+		((RepositorioEquipamentoArrayList)this.repositorio).atualizar(equip);
 	}
 
 	public boolean existe(Equipamento equip) { 

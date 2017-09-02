@@ -111,8 +111,4 @@ public abstract class Usuario implements Serializable{
 		return resultado;
 	}
 
-	public static void main(String[] args) {
-
-	}
-
 }
