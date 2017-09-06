@@ -10,7 +10,7 @@ package br.ufrpe.assistec.negocio.beans;
  * @author BARTOLOMEU.DIAS
  */
 public class Funcionario {
-    private String matFuncionario;
+    private String matriculaFuncionario;
     private String matriculaSuperv;
     private String Nome;
     private Long CPF;
@@ -19,11 +19,11 @@ public class Funcionario {
     private int cargaHoraria;
 
     public String getMatFuncionario() {
-        return matFuncionario;
+        return matriculaFuncionario;
     }
 
-    public void setMatFuncionario(String matFuncionario) {
-        this.matFuncionario = matFuncionario;
+    public void setMatriculaFuncionario(String matriculaFuncionario) {
+        this.matriculaFuncionario = matriculaFuncionario;
     }
 
     public String getMatriculaSuperv() {

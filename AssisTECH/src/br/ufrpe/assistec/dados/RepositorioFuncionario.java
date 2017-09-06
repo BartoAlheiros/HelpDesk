@@ -6,6 +6,7 @@
 package br.ufrpe.assistec.dados;
 
 import br.ufrpe.assistec.db_conection.ConexaoMySQL;
+import br.ufrpe.assistec.negocio.beans.Cliente;
 import br.ufrpe.assistec.negocio.beans.Funcionario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,6 +34,21 @@ public class RepositorioFuncionario implements IRepositorioFuncionarios{
         
         
         return true;
+    }
+
+    @Override
+    public void atualizar(Funcionario f) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Cliente buscaPorMatricula(Long cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void remover(Long cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

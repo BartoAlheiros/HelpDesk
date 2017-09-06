@@ -14,5 +14,10 @@ import br.ufrpe.assistec.negocio.beans.Funcionario;
  */
 public interface IRepositorioFuncionarios {
     public boolean cadastrar(Funcionario f);
-	
+    	
+    public void atualizar(Funcionario f);
+
+    public Cliente buscaPorMatricula(Long cpf);
+
+    void remover(Long cpf);
 }
