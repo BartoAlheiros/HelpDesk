@@ -50,7 +50,7 @@ public class Janela1Controller {
         Stage stage = new Stage();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
-        stage.setTitle("Cadastrar T�cnico");
+        stage.setTitle("Cadastrar Tecnico");
         stage.setResizable(false);
         stage.show();
     }
@@ -94,7 +94,7 @@ public class Janela1Controller {
         Stage stage = new Stage();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
-        stage.setTitle("Consultar T�cnico");
+        stage.setTitle("Consultar Tecnico");
         stage.setResizable(false);
         stage.show();
     }

@@ -1,7 +1,8 @@
 package br.ufrpe.assistec.gui;
 	
-import br.ufrpe.assistec.db_conection.ConexaoMySQL;
 import java.sql.Connection;
+
+import br.ufrpe.assistec.factory.ConexaoMySQL;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;

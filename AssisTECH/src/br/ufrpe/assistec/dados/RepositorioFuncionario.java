@@ -5,8 +5,7 @@
  */
 package br.ufrpe.assistec.dados;
 
-import br.ufrpe.assistec.db_conection.ConexaoMySQL;
-import br.ufrpe.assistec.negocio.beans.Cliente;
+import br.ufrpe.assistec.factory.ConexaoMySQL;
 import br.ufrpe.assistec.negocio.beans.Funcionario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,11 +17,11 @@ import java.util.logging.Logger;
  *
  * @author BARTOLOMEU.DIAS
  */
-public class RepositorioFuncionario implements IRepositorioFuncionarios{
+public class RepositorioFuncionario implements IRepositorioFuncionario{
     Connection connection = ConexaoMySQL.getConexaoMySQL();
     
     @Override
-    public boolean cadastrar(Funcionario f) {
+    public boolean add(Funcionario f) {
         String sql = "insert into funcionario " +
                 "(Matricula, Matricula_supervisor, Nome, CPF, CNPJ_empresa, Cod_Unid_Suporte, Login, Senha, Email, Carga_hora) " +
                 "values (?,?,?,?,?,?,?,?,?,?)";
@@ -34,21 +33,6 @@ public class RepositorioFuncionario implements IRepositorioFuncionarios{
         
         
         return true;
-    }
-
-    @Override
-    public void atualizar(Funcionario f) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Cliente buscaPorMatricula(Long cpf) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void remover(Long cpf) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

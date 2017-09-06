@@ -25,7 +25,7 @@ public class RepositorioOrdensArray implements IRepositorioOrdens {
 	public boolean existe(Ordem os) {
 		boolean resultado = false;
 		for(int i = 0; i < this.proxima; i++) {
-			if(this.ordens[i].getNumero().equals(os.getNumero())) {                 //se o código do livro[i] for igual ao código do livro que passei, resultado = true.
+			if(this.ordens[i].getNumero().equals(os.getNumero())) {                 //se o cï¿½digo do livro[i] for igual ao cï¿½digo do livro que passei, resultado = true.
 				resultado = true;
 			}
 		}
@@ -67,13 +67,13 @@ public class RepositorioOrdensArray implements IRepositorioOrdens {
 	}
 
 	/*
-	 * Verifica se um equipamento já está cadastrado em alguma OS do array.
-	 * @param String: número de série da OS.
+	 * Verifica se um equipamento jï¿½ estï¿½ cadastrado em alguma OS do array.
+	 * @param String: nï¿½mero de sï¿½rie da OS.
 	 * @return boolean
-	 * ps.: faz parte desta classe porque um equipamento pode estar cadastrado no sistema, mas pode não estar em nenhuma OS.
-	 * Já aqui nós fazemos a verificação se ele está em uma OS.
-	 * As possibilidades de ele estar cadastrado apenas no sistema, sem estar vinculado a alguma OS, serão tratadas
-	 * em situações posteriores no código.
+	 * ps.: faz parte desta classe porque um equipamento pode estar cadastrado no sistema, mas pode nï¿½o estar em nenhuma OS.
+	 * Jï¿½ aqui nï¿½s fazemos a verificaï¿½ï¿½o se ele estï¿½ em uma OS.
+	 * As possibilidades de ele estar cadastrado apenas no sistema, sem estar vinculado a alguma OS, serï¿½o tratadas
+	 * em situaï¿½ï¿½es posteriores no cï¿½digo.
 	 * */
 	public boolean validarEquipamento(String serie) throws EquipamentoEmServicoException {
 		boolean resultado = false;
@@ -92,7 +92,7 @@ public class RepositorioOrdensArray implements IRepositorioOrdens {
 		return resultado;
 	}
 
-	/*Este método permite encontrar um equipamento, associado a uma Ordem, e devolver a instância dele para o método
+	/*Este mï¿½todo permite encontrar um equipamento, associado a uma Ordem, e devolver a instï¿½ncia dele para o mï¿½todo
 	 * que o chamou.*/
 	public boolean procurarEquipamento(String serie) {
 		boolean resultado = false;
@@ -138,7 +138,7 @@ public class RepositorioOrdensArray implements IRepositorioOrdens {
 
 	/*
 	 * 
-	 * altera um equipamento, cliente ou técnico em uma ordem de serviço. Recebendo a instância da ordem que se quer alterar.
+	 * altera um equipamento, cliente ou tï¿½cnico em uma ordem de serviï¿½o. Recebendo a instï¿½ncia da ordem que se quer alterar.
 	 * 
 	 * */
 	public void alterar(Ordem os, String tipo, Object o) throws EquipamentoEmServicoException {

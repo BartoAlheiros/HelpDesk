@@ -12,12 +12,8 @@ import br.ufrpe.assistec.negocio.beans.Funcionario;
  *
  * @author BARTOLOMEU.DIAS
  */
-public interface IRepositorioFuncionarios {
-    public boolean cadastrar(Funcionario f);
-    	
-    public void atualizar(Funcionario f);
-
-    public Cliente buscaPorMatricula(Long cpf);
-
-    void remover(Long cpf);
+public interface IRepositorioFuncionario {
+    //adiciona um funcionario ao banco
+	public boolean add(Funcionario f);
+	
 }

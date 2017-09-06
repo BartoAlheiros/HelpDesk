@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.ufrpe.assistec.db_conection;
+package br.ufrpe.assistec.factory;
 
 /**
  *
@@ -51,7 +51,7 @@ public class ConexaoMySQL {
 
             String mydatabase = "assistech";       //nome do seu banco de dados
  
-            String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
+            String url = "jdbc:mysql://" + serverName + ":8080/" + mydatabase;
 
             String username = "root";        //nome de um usuário de seu BD      
 
